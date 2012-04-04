@@ -1,0 +1,32 @@
+.x-playercontrol {
+    .x-innerhtml {
+        font-family: "OpenSansCondensedBold";
+    }
+    .x-slider-field {
+        margin: 0;
+        .x-component-outer {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    .x-slider-fill {
+        @include background-gradient(#e76f17, recessed);
+        border-radius: 0px;
+        height: 0.6em;
+        margin-top: 0.825em !important;
+    }
+    .x-slider::after {
+        background-color: #252525;
+        background-image: none;
+        border-radius: 0px;
+        @include box-shadow(6px 6px 0px #1d1e1e inset, 0 1px 1px #717273);
+    }
+    .x-thumb {
+        z-index: 2;
+        &::before {
+            border: 0;
+            border-radius: 0;
+            background: transparent url('../images/slider-thumb.png') no-repeat center center;
+        }
+    }
+}

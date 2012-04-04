@@ -1,0 +1,22 @@
+.x-slider-fill{
+    margin:0.925em;
+    position:absolute;
+    height:0.8em;
+    -webkit-border-radius:0.4em;
+    border-radius:0.4em;
+    margin-top:0.75em !important;
+    background-image:-webkit-gradient(linear, left top ,left bottom, from(#0A3A86), color-stop(.5, #4C8DE7), color-stop(.95, #6BABF5), to(#0A3A86));
+    z-index:1 ;
+}
+.x-slider-fill1{
+    background-image:-webkit-gradient(linear, left top ,left bottom, from(#8b1a05), color-stop(.5, #e35e4f), color-stop(.95, #e18080), to(#6f2c22));
+}
+.x-slider-fill2{
+    background-image:-webkit-gradient(linear, left top ,left bottom, from(#098855), color-stop(.5, #53df73), color-stop(.95, #81e0ac), to(#43652c));
+}
+.x-slider-fill3{
+    background-image:-webkit-gradient(linear, left top ,left bottom, from(#6c2458), color-stop(.5, #bf71c1), color-stop(.95, #c69bc6), to(#513a56));
+}
+.x-draggable {
+    z-index:2;
+}

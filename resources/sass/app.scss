@@ -1,0 +1,32 @@
+$active-color: #8bb237;
+$include-default-icons: false; 
+$button-radius: 0.2em;
+
+@import "misc/fonts";
+@import "retina";
+@import "sencha-touch/default/all";
+
+@include sencha-panel;
+@include sencha-buttons;
+// @include sencha-sheet;
+// @include sencha-picker;
+// @include sencha-tabs;
+// @include sencha-toolbar;
+@include sencha-toolbar-forms;
+// @include sencha-indexbar;
+// @include sencha-list;
+@include sencha-layout;
+@include sencha-carousel;
+@include sencha-form;
+// @include sencha-msgbox;
+
+@import "overrides";
+@import "ux/sliderfill";
+@import "widgets/buttons";
+@import "widgets/playercontrol";
+@import "misc/icons";
+@import "views/checkin";
+@import "views/contentinfo";
+@import "views/home";
+@import "views/login";
+@import "views/share";

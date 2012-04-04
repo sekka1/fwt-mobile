@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html manifest="" lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>FriendsWith.TV</title>
+	<link rel="shortcut icon" type="image/x-icon" href="resources/icons/favicon.ico">
+    <style type="text/css">
+        html, body {
+			height: 100%;
+			background: #F7F7F7;
+        }
+
+        #appLoadingIndicator {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -7px;
+            margin-left: -30px;
+            width: 59px;
+            height: 15px;
+        }
+
+        #appLoadingIndicator > * {
+            background-color: #F7F7F7;
+            float: left;
+			margin-left: 7px;
+            height: 15px;
+			width: 15px;			
+            -webkit-border-radius: 15px;
+            -webkit-animation-name: appLoadingIndicator;
+			-webkit-animation-duration: 2s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-direction: linear;
+            opacity: 0.3
+        }
+
+        #appLoadingIndicator > :nth-child(1) {
+            -webkit-animation-delay: 0.18s;
+			margin-left: 0;
+        }
+
+        #appLoadingIndicator > :nth-child(2) {
+            -webkit-animation-delay: 0.42s;
+        }
+
+        #appLoadingIndicator > :nth-child(3) {
+            -webkit-animation-delay: 0.54s;
+        }
+
+        @-webkit-keyframes appLoadingIndicator{
+            50% {
+                opacity: 1;
+                background-color:#999
+            }
+        }
+    </style><!--
+    <script id="microloader" type="text/javascript" src="sdk/microloader/development.js"></script>-->
+</head>
+<body>
+    <div id="appLoadingIndicator">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

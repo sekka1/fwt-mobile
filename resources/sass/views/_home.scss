@@ -1,0 +1,36 @@
+.ftv-homeview {
+    color: #FFF;
+    background-size: cover;
+    .header {
+        height: 10em;
+        padding: 1em;
+        background: rgba(0,0,0,0.5);
+        .x-button-rounded {
+            margin-left: 0.6em;
+        }
+    }
+    .show-header {
+        padding-top: 0.3em;
+        h1 {
+            font-family: "OpenSansCondensedBold";
+            font-size: 3em;
+        }
+        h2 {
+            font-family: "OpenSansCondensedLight";
+            font-size: 1.7em;
+        }
+    }
+    .x-playercontrol {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .x-carousel-item {
+        padding-bottom: 1.5em;
+    }
+    .x-carousel-indicator {
+        background: rgba(0,0,0,0.5);
+    }
+    .x-carousel-item {
+        background: rgba(#FFF, 0.8);
+    }
+}

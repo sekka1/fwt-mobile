@@ -1,0 +1,38 @@
+.x-button-rounded {
+    width: 95px;
+    height: 95px;
+    background: transparent url(../images/rounded-btn-bg.png) no-repeat center center;
+    @include border-radius(95px);
+    .x-button-icon, .x-button-icon.x-icon-mask {
+        width: 3.1em;
+        height: 3.1em;
+        background-size: 3.1em;
+    }
+    .x-button-icon.x-icon-mask {
+        background-color: #fff;
+        background-image: none;
+        -webkit-mask-size: 3.1em;
+    }
+}
+
+.x-button-player,
+.x-toolbar .x-button-player {
+    width: 45px;
+    height: 45px;
+    background: transparent url(../images/player-btn.png) no-repeat center center;
+    padding: 0;
+    @include border-radius(45px);
+    .x-button-icon, .x-button-icon.x-icon-mask {
+        width: 1em;
+        height: 1em;
+    }
+    .x-button-icon.x-icon-mask {
+        background-color: #fff;
+        background-image: none;
+        -webkit-mask-size: 1em;
+    }
+}
+
+.x-button-square {
+    border-radius: 0;
+}

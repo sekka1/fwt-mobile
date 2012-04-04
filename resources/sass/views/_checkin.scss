@@ -1,0 +1,25 @@
+.fwtv-checkinview {
+    width: 100%;
+    height: 17.5em;
+    .x-innerhtml {
+        @include display-box;
+        @include box-pack(center);
+        @include box-align(center);
+    }
+    .column {
+        background: transparent url(../images/check.png) no-repeat center 0;
+        padding-top: 6em;
+        margin-left: 3em;
+        color: #FFF;
+        p {
+            font-size: 1.7em;
+            font-family: "OpenSansCondensedLight";
+        }
+        h1 {
+            font-size: 3em;
+        }
+        .caption, h1 {
+            font-family: "OpenSansCondensedBold";
+        }
+    }
+}

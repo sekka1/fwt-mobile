@@ -1,0 +1,11 @@
+@include pictos-iconmask(locate4);
+@include pictos-iconmask(pause);
+@include pictos-iconmask(play1);
+
+.ico-arrow {
+    background-image: url('../images/arrow.png');
+}
+
+.ico-check {
+    background-image: url('../images/check.png');
+}

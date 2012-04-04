@@ -1,0 +1,15 @@
+@mixin retina-background($image-file, $size) {
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+        background-image: url($image-file);
+        background-size: $size;
+    }
+}
+
+.fwtv-loginview {
+    .splash-logo {
+        width: 160px;
+        height: 187px;
+        margin-bottom: 1em;
+        @include background-image-retina('splash_logo.png');
+    }
+}
