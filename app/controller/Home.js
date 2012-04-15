@@ -19,7 +19,7 @@ Ext.define('FWTV.controller.Home', {
 	
 	init: function() {
 	    var me = this;
-	    
+
 	    me.getApplication().on({
 	        scope: me,
 	        'deviceready': me.onDeviceReady,
@@ -31,9 +31,9 @@ Ext.define('FWTV.controller.Home', {
 
 //app listeners
 
-    onDeviceReady: function(deviceId, context) {
-        this.updateView(deviceId, context);
-        this.updatePlayer(deviceId, context);
+    onDeviceReady: function(context) {
+        this.updateView(context);
+        this.updatePlayer(context);
         
         //SDPWeb connection
         incrementPosition();
@@ -43,7 +43,7 @@ Ext.define('FWTV.controller.Home', {
      * Fire the new device context into the application,
      * and refreshes the view
      */
-	updateView: function(deviceId, context) {
+	updateView: function(context) {
 	    var me = this;
 	    
 	    //<debug>
@@ -79,7 +79,7 @@ Ext.define('FWTV.controller.Home', {
      * Fire the new device context into the application,
      * and refreshes the view
      */
-	updatePlayer: function(deviceId, context) {
+	updatePlayer: function(context) {
 	    this.getPlayerControl().updateSlider(context.position, context.duration);
 	},
 	

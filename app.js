@@ -44,12 +44,8 @@ Ext.application({
     tabletStartupScreen: 'resources/loading/Homescreen~ipad.jpg',
  
     launch: function() {
-        
         //expose application instance
         window.Application = this;
-        
-        // Destroy the #appLoadingIndicator element
-        Ext.fly('appLoadingIndicator').destroy();
     },
 
     onUpdated: function() {

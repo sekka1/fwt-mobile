@@ -14,24 +14,25 @@ Ext.define('FWTV.controller.Login', {
         
         SDPWeb.getSubscriptionScript({
             success: function(status, data) {
-                console.log('status=' + status);
+                
                 if (status === 'connected') {
-                    SDPWeb.subscribe();
-                    
                     //get the first device
-                    var deviceId, device,
+                    var deviceId, context,
                         devices = data.devices;
                         
                     for(deviceId in devices) {
-                        device = devices[deviceId];
+                        context = devices[deviceId];
                         break;
                     }
                     
-                    me.fireEvent('deviceready', deviceId, device);
+                    me.getApplication().fireEvent('deviceready', context);
                     
                 } else {
                     Ext.widget('loginview');
                 }
+                
+                // Destroy the #appLoadingIndicator element
+                Ext.fly('appLoadingIndicator').destroy();
             }
         });
     },
