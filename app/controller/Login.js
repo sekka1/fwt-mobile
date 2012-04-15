@@ -9,11 +9,12 @@ Ext.define('FWTV.controller.Login', {
     },
     
     launch: function() {
-        var me = this;
+        var me = this,
+            cachedOAuth = me.getCachedOAuth();
         
         SDPWeb.getSubscriptionScript({
             success: function(status, data) {
-                debugger;
+                console.log('status=' + status);
                 if (status === 'connected') {
                     SDPWeb.subscribe();
                     
@@ -38,6 +39,23 @@ Ext.define('FWTV.controller.Login', {
 //listeners
 
     onBtnConnectTap: function() {
-        location.href = 'https://api.sdp.nds.com/oauth/authorize?client_id=' + SDPWeb.appId;
+        open('https://api.sdp.nds.com/oauth/authorize?client_id=' + SDPWeb.appId);
+    },
+    
+//other methods
+    
+    getCachedOAuth: function() {
+        var cookieValues,
+            oauth = {
+            accessToken : localStorage.getItem('accessToken'),
+            refreshToken: localStorage.getItem('refreshToken')
+        };
+        
+        if (oauth.refreshToken && !(/refresh_token/).test(document.cookie)) {
+            cookieValues = document.cookie.split(';');
+            cookieValues.push('refresh_token=' + oauth.refresh_token + ';');
+            
+            document.cookie = cookieValues.join(';');
+        }
     }
 });

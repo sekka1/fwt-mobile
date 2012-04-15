@@ -10,6 +10,7 @@ Ext.require([
     'Ext.carousel.Carousel',
     'Ext.data.JsonP',
     'Ext.data.JsonStore',
+    'Ext.device.Device',    
     'Ext.field.Slider',
     'Ext.MessageBox',
     'Ext.PlayerControl',
@@ -43,7 +44,7 @@ Ext.application({
     tabletStartupScreen: 'resources/loading/Homescreen~ipad.jpg',
  
     launch: function() {
-
+        
         //expose application instance
         window.Application = this;
         
