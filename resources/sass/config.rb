@@ -8,7 +8,7 @@ load File.join(dir, '..', '..', 'sdk', 'resources', 'themes')
 sass_path = dir
 css_path = File.join(dir, "..", "css")
 images_dir = File.join(dir, "..", "images")
-images_path = '../images'
+http_images_path = '../images'
 
 # Require any additional compass plugins here.
 output_style = :compressed

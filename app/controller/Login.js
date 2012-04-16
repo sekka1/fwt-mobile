@@ -12,22 +12,19 @@ Ext.define('FWTV.controller.Login', {
         var me = this,
             cachedOAuth = me.getCachedOAuth();
         
-        SDPWeb.getSubscriptionScript({
+        SDPWeb.login({
             success: function(status, data) {
+                var devices;
                 
                 if (status === 'connected') {
-                    //get the first device
-                    var deviceId, context,
-                        devices = data.devices;
-                        
-                    for(deviceId in devices) {
-                        context = devices[deviceId];
-                        break;
-                    }
-                    
-                    me.getApplication().fireEvent('deviceready', context);
+                    devices = Ext.Object.getValues(data.devices);
+                    me.getApplication().fireEvent('deviceready', devices[0].context);
                     
                 } else {
+                    if (status === 'off') {
+                        Ext.Msg.alert('No devices found', 'Please turn at least one device.');
+                    }
+                    
                     Ext.widget('loginview');
                 }
                 

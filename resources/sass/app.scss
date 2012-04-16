@@ -18,7 +18,7 @@ $button-radius: 0.2em;
 @include sencha-layout;
 @include sencha-carousel;
 @include sencha-form;
-// @include sencha-msgbox;
+@include sencha-msgbox;
 
 @import "overrides";
 @import "ux/sliderfill";

@@ -1,9 +1,10 @@
 //<debug>
 Ext.Loader.setPath({
-    'Ext': 'sdk/src',
-    'Ext.PlayerControl': 'lib/PlayerControl.js',
-    'Ext.plugin.SliderFill': 'lib/SliderFill.js',
-    'SDPWeb': 'lib/SDPWeb.js'
+    'Ext'                   : 'sdk/src',
+    'Ext.PlayerControl'     : 'lib/PlayerControl.js',
+    'Ext.plugin.SliderFill' : 'lib/SliderFill.js',
+    'Ext.util.Cookies'      : 'lib/Cookies.js',
+    'SDPWeb'                : 'lib/SDPWeb.js'
 });
 
 Ext.require([
@@ -15,6 +16,7 @@ Ext.require([
     'Ext.MessageBox',
     'Ext.PlayerControl',
     'Ext.plugin.SliderFill',
+    'Ext.util.Cookies',
     'SDPWeb'
 ]);
 //</debug>
